@@ -97,4 +97,14 @@
       <version>${okhttp.version}</version>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.6.15</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
