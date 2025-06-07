@@ -11,17 +11,10 @@ class SplashView extends GetView<SplashController> {
     return Scaffold(
         backgroundColor: Colors.white,
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Spacer(flex: 4),
-              Image.asset(
-                "assets/images/boot.png",
-                fit: BoxFit.cover,
-                width: 300,
-              ),
-              Spacer(flex: 6),
-            ],
+          child: Image.asset(
+            "assets/images/boot.png",
+            fit: BoxFit.cover,
+            width: 300,
           ),
         )
     );

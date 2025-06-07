@@ -56,7 +56,6 @@ class IndexController extends GetxController {
 
   /// 切换索引
   void changeIndex(int index) {
-    print("hhhhhhh: " + index.toString());
     currentIndex.value = index;
     // 切换 PageView 的页面
     pageController.animateToPage(

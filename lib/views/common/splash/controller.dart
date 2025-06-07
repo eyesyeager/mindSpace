@@ -23,7 +23,7 @@ class SplashController extends GetxController {
     // 检查应用更新
     _checkUpdate();
     // 加载初始化数据
-    _loadInitData();
+    await _loadInitData();
     // 跳转到主页面
     Get.offNamed(AppRoutes.index);
   }
@@ -66,7 +66,7 @@ class SplashController extends GetxController {
   }
 
   /// 加载初始化数据
-  void _loadInitData() async {
+  Future<void> _loadInitData() async {
     // 加载本地缓存数据
     Map<String, dynamic> initDataMap = CacheService.to.getJson(CacheConstants.initData);
     if (initDataMap.isNotEmpty) {
@@ -93,6 +93,6 @@ class SplashController extends GetxController {
     for (ContextListVo contextListVO in result.data!) {
       newInitDataMap[contextListVO.code] = contextListVO.value;
     }
-    CacheService.to.setJson(CacheConstants.initData, newInitDataMap);
+    await CacheService.to.setJson(CacheConstants.initData, newInitDataMap);
   }
 }
