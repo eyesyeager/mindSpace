@@ -1,6 +1,6 @@
 sealed class ServerConfig {
   /// 服务器base地址
-  static const String baseApiUrl = 'http://api.mindspace.eyescode.top';
+  static const String baseApiUrl = 'https://api-mindspace.eyescode.top';
 
   /// 连接服务器超时时间
   static const Duration connectTimeout = Duration(milliseconds: 10000);

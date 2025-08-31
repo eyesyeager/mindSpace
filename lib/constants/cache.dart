@@ -13,9 +13,6 @@ sealed class CacheConstants {
   /// 白噪音收藏
   static const String noiseStar = 'noiseStar';
 
-  /// 白噪音音频前缀
-  static const String noiseAudioPrefix = 'noiseAudio-';
-
   /// 白噪音播放模式
   static const String noisePlayMode = 'noisePlayMode';
 

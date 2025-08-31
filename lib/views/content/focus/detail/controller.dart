@@ -41,13 +41,8 @@ class FocusDetailController extends GetxController {
 
   /// 获取白噪音音频
   Future<String> getNoiseAudio(int id) async {
-    String audioUrl = CacheService.to.getString(CacheConstants.noiseAudioPrefix + id.toString());
-    if (audioUrl.isNotEmpty) {
-      return audioUrl;
-    }
     Result<String> result = await Api.getNoiseAudio(id);
     if (ServerConfig.codeSuccess == result.code) {
-      CacheService.to.setString(CacheConstants.noiseAudioPrefix + id.toString(), result.data!);
       return result.data!;
     } else {
       Get.snackbar("获取音频失败！", result.msg!);
