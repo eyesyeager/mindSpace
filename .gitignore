@@ -36,3 +36,10 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+application*.yml
+application*.yaml
+application*.properties
+bootstrap*.yml
+bootstrap*.yaml
+bootstrap*.properties
